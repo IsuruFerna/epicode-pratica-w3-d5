@@ -499,10 +499,16 @@ console.log("searchAndDivide: ", searchAndDivide("Avengers"));
 
 // ***************************************************************************************************************
 const removeIndex = function (num) {
-   return movies.splice(num, 1);
+   const newArr = [];
+   for (let i = 0; i < movies.length; i++) {
+      if (i !== num) {
+         newArr.push(movies[i]);
+      }
+   }
+   return newArr;
 };
 
-console.log("removeIndex: ", removeIndex(0));
+console.log("removeIndex: ", removeIndex(1));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
